@@ -1,0 +1,17 @@
+{
+  "name": "vfr-implantation-demo",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Tiago Vicente <tiago@sizebay.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "dependencies": {
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
+}

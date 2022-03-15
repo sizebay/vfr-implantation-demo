@@ -1,0 +1,83 @@
+.vfr-modal-active {
+  overflow: hidden;
+}
+
+.vfr-app {
+  border: none;
+  position: absolute;
+  z-index: 999999;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vfr__container--backdrop {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.szb-modal-open {
+  opacity: 1;
+  display: block;
+}
+
+.szb-modal-desktop {
+  display: block;
+  width: 948px;
+  height: 540px;
+}
+
+#szb-vfr-modal > * {
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .szb-modal-desktop {
+    display: block;
+    width: calc(100% - 18px);
+    height: 100%;
+  }
+}
+
+.vfr__is-open {
+  overflow: hidden;
+}
+
+.vfr__body--plugin-is-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .vfr-app {
+    min-height: 350px;
+    height: calc(100% - 18px);
+  }
+
+  #sizebay-close-button {
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+  }
+}
+
+#sizebay-close-button {
+  display: flex;
+  position: absolute;
+  z-index: 9999999;
+  color: #000;
+  transform: rotate(45deg);
+  font-weight: lighter;
+  cursor: pointer;
+}
