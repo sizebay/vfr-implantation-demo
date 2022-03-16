@@ -14,11 +14,11 @@ A new tab will be open on your default browser [http://localhost:8080](http://lo
 
 The following variables can be changed for testing on the `index.js`
 
-| variable    | description              |
-| ----------- | ------------------------ |
-| productLink | your product link        |
-| tenantId    | unique id for your store |
+| variable      | description              |
+| ------------- | ------------------------ |
+| `productLink` | your product link        |
+| `tenantId`    | unique id for your store |
 
 ## Need help?
 
-Enter in contact with our [support](mailto:support@sizebay.com)
+Enter in contact with our support team on support@sizebay.com
