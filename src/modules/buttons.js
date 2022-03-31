@@ -3,6 +3,8 @@ import { handleOpenModal } from './modal'
 const createButton = (text, btnId, iframeParams) => {
   const btn = document.createElement('button')
   btn.id = btnId
+  btn.className = 'szb-button'
+  btn.type = 'button'
 
   btn.onclick = () => handleOpenModal(iframeParams)
 
@@ -43,5 +45,5 @@ export const renderButtons = (productId, accessory, sid, tenantId) => {
     wrapper.append(btn)
   }
 
-  document.querySelector('body').append(wrapper)
+  document.querySelector('.content .product-info').append(wrapper)
 }

@@ -1,3 +1,36 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-product {
+  width: 450px;
+}
+
+#sizebay-wrapper {
+  gap: 10px;
+  display: flex;
+}
+
+.szb-button {
+  background: transparent;
+  border: 1px #000 solid;
+  padding: 10px;
+  cursor: pointer;
+}
+
 .vfr-modal-active {
   overflow: hidden;
 }
