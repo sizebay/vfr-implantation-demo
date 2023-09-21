@@ -5,10 +5,11 @@ const fetcher = async (url) => {
   const res = await fetch(`${APP_URL}${url}`, {
     method: 'GET',
   })
-  if (res.ok) {
-    const teste = await res.json()
-    return teste
-  }
+
+  if (res?.ok) return await res.json()
+
+  console.error('Product not found')
+  return
 }
 
 export const createSID = async () => {

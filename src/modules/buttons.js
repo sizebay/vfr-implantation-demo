@@ -13,13 +13,14 @@ const createButton = (text, btnId, iframeParams) => {
   return btn
 }
 
-export const renderButtons = (productId, accessory, sid, tenantId) => {
-  let buttons = []
+export const renderButtons = (productId, accessory, sid, tenantId, lang) => {
+  const buttons = []
 
   const iframeParams = {
     productId,
     sid,
     tenantId,
+    lang
   }
 
   buttons.push(
