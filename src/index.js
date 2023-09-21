@@ -3,7 +3,7 @@ import { renderButtons } from './modules/buttons'
 import { getProduct, createSID } from './modules/fetcher'
 import { renderRecommendation } from './modules/recommendation'
 
-const productLink = 'https://store.sizebay.com/products/nylon-bomber-jacket-in-stoneeee'
+const productLink = 'https://store.sizebay.com/products/nylon-bomber-jacket-in-stone'
 const tenantId = 1039
 const lang = 'en'
 
