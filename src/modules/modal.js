@@ -16,7 +16,7 @@ const openIframe = (props) => {
   const backdrop = mountBackdrop()
   const modal = document.getElementById('szb-modal') ?? document.createElement('iframe')
 
-  modal.src = `${APP_URL}V4/?mode=${mode}&id=${productId}&sid=${sid}&tenantId=${tenantId}&lang=${lang}`
+  modal.src = `${APP_URL}V4/?mode=${mode}&id=${productId}&sid=${sid}&tenantId=${tenantId}&lang=${lang}&watchOpeningEvents=true`
   modal.id = 'szb-modal'
 
   modal.className = 'vfr-app modal-loading'
@@ -56,7 +56,10 @@ export const handleOpenModal = (iframeParams) => {
 
   document.querySelector('html').classList.add('vfr-modal-active')
 
-  window.addEventListener('message', (event) => event.data === 'close-fitting-room' && closeIframe(backdrop, iframeParams))
+  window.addEventListener(
+    'message',
+    (event) => event.data === 'close-fitting-room' && closeIframe(backdrop, iframeParams)
+  )
 
   //REVIEW: to avoid headaches we are not creating the close button but watching the close-event from the iframe
   // !document?.querySelector('#sizebay-close-button') && createCloseButton(backdrop, iframeParams)
