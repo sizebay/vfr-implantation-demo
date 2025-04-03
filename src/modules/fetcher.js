@@ -7,17 +7,11 @@ export default async function fetcher(URL, options) {
     headers: {
       ...options?.headers,
       referer: options?.permalink,
-      tenant_id: options?.tenant_id,
-      device: 'desktop',
-      'x-szb-country': null,
-      'x-szb-tenant-id': options?.tenant_id,
-      'x-szb-device': 'desktop',
     },
   }
 
   try {
     const res = await fetch(URL, {
-      credentials: options?.credentials || 'include',
       referrerPolicy: 'origin-when-cross-origin',
       ...parsedOptions,
     })
@@ -37,7 +31,7 @@ export default async function fetcher(URL, options) {
 
     return {
       error: true,
-      message: typeof parsedResponse === 'string' ? parsedResponse : DEFAULT_ERROR_MESSAGE,
+      message: 'Cannot get product',
       status: res.status,
     }
   } catch (err) {
@@ -45,7 +39,7 @@ export default async function fetcher(URL, options) {
 
     return {
       error: true,
-      message: DEFAULT_ERROR_MESSAGE,
+      message: 'Cannot get product',
       status: 500,
     }
   }
@@ -53,7 +47,7 @@ export default async function fetcher(URL, options) {
 
 const SID = getCookie('SIZEBAY_SESSION_ID_V4') || (await createSID())
 
-export const getProduct = async (permalink, tenantId) => {
+export const getProduct = async (permalink) => {
   const URL = `${APP_URL}plugin/my-product-id?sid=${SID}&permalink=${permalink}`
 
   let product = null
