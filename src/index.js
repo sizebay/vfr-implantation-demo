@@ -15,8 +15,6 @@ export const init = async () => {
     tenantId,
   })
 
-  console.log({ id, accessory })
-
   if (id) {
     renderButtons(id, accessory, SID, tenantId, lang)
     renderRecommendation(id, SID, tenantId)
